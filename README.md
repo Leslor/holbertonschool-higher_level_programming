@@ -17,13 +17,13 @@ This is a project for Holberton School Peru. The objective is to lear about the 
 ---
 
 
-### Compilation
-You can compile the files using this command to check that there are no errors:
+### Run Files
+You can run Python files using this command:
 ```
 $ python3 name_file.py
 ```
 ##List of Project:
-[0x00-python-hello_world](://github.com/Leslor/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world)
+* [0x00-python-hello_world](://github.com/Leslor/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world)
 
 ---
 
