@@ -19,6 +19,7 @@ listint_t *insert_node(listint_t **head, int number)
 		free(node);
 		return (NULL);
 	}
+	node->n = number;
 	/*If the node is the first node to the list*/
 	if (ptr == NULL)
 	{
@@ -26,7 +27,6 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = node;
 		return (node);
 	}
-	node->n = number;
 	while (ptr->next != NULL)
 	{
 		if (ptr->next->n >= number)
