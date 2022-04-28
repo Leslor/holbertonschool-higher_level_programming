@@ -7,7 +7,7 @@ if __name__ == "__main__":
     args = len(sys.argv) - 1
     if args == 0:
         print(f"{args} arguments.")
-    if args == 1:
+    elif args == 1:
         print(f"{args} argument:")
     else:
         print(f"{args} arguments:")
