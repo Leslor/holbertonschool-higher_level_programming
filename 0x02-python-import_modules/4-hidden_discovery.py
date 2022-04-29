@@ -7,4 +7,4 @@ if __name__ == "__main__":
     import hidden_4
     list_d = [i for i in dir(hidden_4) if i[:2] != "__"]
     for item in list_d:
-        print(i)
+        print(item)
