@@ -6,4 +6,6 @@ if __name__ == "__main__":
     defined by the compiled module hidden_4.pyc """
     import hidden_4
     list_d = [i for i in dir(hidden_4) if i[:2] != "__"]
-    print("\n".join(list_d))
+    for i in list_d:
+        print(i)
+    # print("\n".join(list_d))
