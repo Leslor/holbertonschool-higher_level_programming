@@ -18,8 +18,8 @@ if __name__ == "__main__":
         elif operator == '/':
             print(f"{a} / {b} = {div(a,b)}")
         else:
-            print("Unknown operator. Available operators: +, -, * and /")
+            print(f"Unknown operator. Available operators: +, -, * and /")
             exit(1)
     else:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
