@@ -4,5 +4,5 @@
 def search_replace(my_list, search, replace):
     """ function that replaces all occurrences of an
         element by another in a new list"""
-    new_list=[replace if i == search else i for i in my_list]
+    new_list = [replace if i == search else i for i in my_list]
     return new_list
