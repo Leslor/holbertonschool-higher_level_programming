@@ -5,8 +5,8 @@ def safe_print_division(a, b):
     """ function that divides 2 integers and prints the result."""
     try:
         divition = a / b
-    except ZeroDivisionError:
+    except ArithmeticError:
         divition = None
     finally:
-        print(f'Inside result: {divition}')
+        print('Inside result: {}'.format(divition))
     return divition
