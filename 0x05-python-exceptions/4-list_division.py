@@ -3,7 +3,7 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     """function that divides element by element 2 lists."""
-    new_list=[]
+    new_list = []
     i = 0
     while(i < list_length):
         try:
