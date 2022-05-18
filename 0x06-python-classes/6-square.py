@@ -9,8 +9,8 @@ class Square():
         Args:
             size: size of Square. Private instance attribute.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -37,13 +37,9 @@ class Square():
 
     @position.setter
     def position(self, value):
-        """Setter Method
-            Args:
-                value: size of Square
-        """
-        if (not isinstance(value, tuple)) or len(value) != 2\
-                or type(value[0]) is not int or type(value[1]) is not int\
-                or value[0] < 0 or value[1] < 0:
+        if ((not isinstance(value, tuple)) or len(value) != 2 or
+                type(value[0]) is not int or type(value[1]) is not int or
+                value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
