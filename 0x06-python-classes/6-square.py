@@ -41,7 +41,7 @@ class Square():
             Args:
                 value: size of Square
         """
-        if isinstance(value, tuple) == False or len(value) != 2\
+        if isinstance(value, tuple) is False or len(value) != 2\
                 or type(value[0]) is not int or type(value[1]) is not int\
                 or value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
