@@ -146,4 +146,4 @@ If we pass an infinity or Nan number as each element of the matrix
 	>>> matrix_divided(matrix, float('inf'))
 	[[nan, nan], [nan, nan]]
 	>>> matrix_divided(matrix, float('nan'))
-	[[nan, nan], [nan, nan]]	
+	[[nan, nan], [nan, nan]]
