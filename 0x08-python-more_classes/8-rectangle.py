@@ -102,7 +102,7 @@ class Rectangle():
         if area_1 == area_2:
             return rect_1
         else:
-            if area_1 > area_2_:
+            if area_1 > area_2:
                 return area_1
             else:
                 return area_2
