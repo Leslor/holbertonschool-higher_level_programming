@@ -71,7 +71,7 @@ class Rectangle():
         return rectangle
 
     def __str__(self):
-    """Print method"""
+        """Print method"""
         if self.__width == 0 or self.__height == 0:
             return ''
         return self.__print_rectangle()
