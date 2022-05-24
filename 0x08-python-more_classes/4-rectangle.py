@@ -10,8 +10,8 @@ class Rectangle():
             width: width of Rectangle. Private instance attribute.
             height: height of Rectangle. Private instance attribute.
         """
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -75,6 +75,4 @@ class Rectangle():
         return self.__print_rectangle()
 
     def __repr__(self):
-        width = eval('self.width')
-        height = eval('self.height')
-        return f'Rectangle({width}, {height})'
+        return f'Rectangle({self.__width}, {self.__height})'
