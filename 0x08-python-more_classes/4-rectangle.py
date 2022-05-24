@@ -75,4 +75,6 @@ class Rectangle():
         return self.__print_rectangle()
 
     def __repr__(self):
-        return f'Rectangle({self.__width}, {self.__height})'
+        width = eval('self.width')
+        height = eval('self.height')
+        return f'Rectangle({width}, {height})'
