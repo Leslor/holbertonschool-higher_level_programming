@@ -4,7 +4,7 @@
 
 class Rectangle():
     """A class Square with its constructor method"""
-    def __init__(self, width=0, height=(0, 0)):
+    def __init__(self, width=0, height=0):
         """
         Args:
             width: width of Rectangle. Private instance attribute.
