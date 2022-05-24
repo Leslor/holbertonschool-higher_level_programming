@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Function that prints a text with 2 new lines after each of these characters: ., ? and :"""
+"""Function that prints a text with 2 new lines after each of
+    these characters: ., ? and :"""
 
 
 def text_indentation(text):
@@ -9,20 +10,27 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
-    
-    characters = ['.', '?', ':']
-    i = 0
-    while(i < len(text) - 1):
-        c = 0
-        if text[i] in characters:
-            print(text[i], end='\n\n')
-            if i < (len(text) - 1):
-                i = i + 1
-                while(text[i] == ' '):
-                    c += 1
-                    i+=1
+
+    characters, new_text = ['.', '?', ':', '\n'], ''
+    size, starting = len(text), True
+    idx = 0
+
+    while idx < size:
+        if text[idx] == ' ' and starting is True:
+            idx += 1
+            continue
+
+        starting = False
+        if text[idx] in characters:
+            new_text += text[idx]
+            if text[idx] != '\n':
+                new_text += '\n\n'
+            idx += 1
+            while idx < size and text[idx] == ' ':
+                idx += 1
                 continue
-        else:
-            print(text[i], end='')
-        
-        i = i + c + 1
+
+        if idx < size:
+            new_text += text[idx]
+            idx += 1
+    print(new_text, end='')

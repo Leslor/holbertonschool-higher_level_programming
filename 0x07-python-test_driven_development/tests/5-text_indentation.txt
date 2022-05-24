@@ -1,0 +1,87 @@
+=====================================
+|  How to Use 5-text_indentation.py |
+=====================================
+
+This module has one function called ``def text_indentation(text)``
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Correct Strings
+===============
+<BLANKLINE>
+
+``say_my_nametext_indentation()`` unction that prints a text with 2 new lines after each of these characters: ., ?
+
+	>>> text_indentation("""\n\nWelcome\n to\n Mars.  """)
+	<BLANKLINE>
+	<BLANKLINE>
+	Welcome
+	to
+	Mars.
+	<BLANKLINE>
+
+	>>> text_indentation("\n\n\n Making some examples.")
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	Making some examples.
+	<BLANKLINE>	
+
+invalid-String
+==============
+
+If text argument is not a string
+
+	>>> text_indentation(1)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(['text to print'])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(float('nan'))
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::
+
+If there is not argument.
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+::
+
+Special character
+        >>> say_my_name('Jim O'malley','Musk')
+        Traceback (most recent call last):
+        SyntaxError: invalid syntax
+
+
+
+    Lorem ipsum, dolor sit.
+    <BLANKLINE>
+                            Quonam modo?
+    <BLANKLINE>
+    Utrum  commovere       ?
+    <BLANKLINE>
+    Plus semper voluptatis?
+    <BLANKLINE>
+    Teneo, nem illi videri re.
+    <BLANKLINE>
+    rationi oboediens.
+    <BLANKLINE>
+    Si idimus.
+    <BLANKLINE>
+    Inde seylo                         stadia fecimus.
+    <BLANKLINE>
+    Sin ad es, postea.
+    <BLANKLINE>
+    Quae anio suum

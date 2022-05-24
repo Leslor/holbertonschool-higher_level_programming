@@ -54,25 +54,6 @@ class TestMaxInteger(unittest.TestCase):
         for i in test_list:
             self.assertEqual(max_integer(i), float('inf'))
 
-#    def test_nan_datatype(self):
-#       test_list = [float('nan'), float('nan'), float('nan'), float('nan')]
-#       self.assertEqual(max_integer(test_list), float('nan'))
 
-
-
-"""
-#6. If the argument is not a list type
-#10. assertRaises(TypeError):
-#11. Complex numbers
-#12. Hexadecimal numbers
-#13. Octal Numbers
-
-Error DataType
-#print(max_integer((1, 1.75, 1.5))) -> consultar
-#print(max_integer({1:'Number', 3:'Recursion', 4:'python'})) -> Raise Error
-#print(max_integer([1, 'string1', '2', 4]))->no support < operator betwee an string
-#print(max_integer(None)) ->Error
-
-"""
 if __name__  == "__main__":
     unittest.main()
