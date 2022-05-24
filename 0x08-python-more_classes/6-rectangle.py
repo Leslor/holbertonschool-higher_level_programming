@@ -4,8 +4,8 @@
 
 class Rectangle():
     """A class Square with its constructor method"""
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
-        number_of_instances += 1
         """
         Args:
             width: width of Rectangle. Private instance attribute.
