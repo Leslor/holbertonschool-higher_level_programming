@@ -64,14 +64,14 @@ class Rectangle():
     def __print_rectangle(self):
         """Private Method that  prints the Rectangle with the character # """
         rectangle = ''
-        if self.__width == 0 or self.__height == 0:
-            return rectangle
-        else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    rectangle += '#'
-                rectangle += '\n'
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rectangle += '#'
+            rectangle += '\n'
         return rectangle
 
     def __str__(self):
+    """Print method"""
+        if self.__width == 0 or self.__height == 0:
+            return ''
         return self.__print_rectangle()
