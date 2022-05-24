@@ -1,0 +1,82 @@
+================================
+|  How to Use 3-say_my_name.py |
+================================
+
+This module has one function called ``def say_my_name(first_name, last_name="")``
+
+Import the function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Correct Strings
+===============
+
+``say_my_name(first_name, last_name="")`` prints My name is <first name> <last name>
+
+	>>> say_my_name('LesLor','Paz')
+	My name is LesLor Paz
+
+	>>> say_my_name('Jim O\'malley','Musk')
+	My name is Jim O'malley Musk
+
+	>>> say_my_name('11','234')
+	My name is 11 234
+
+::
+
+If we pass only one argument
+
+	>>> say_my_name("LesLor")
+	My name is LesLor 
+
+
+invalid-String
+==============
+
+If one of the arguments is a not a string
+
+	>>> say_my_name('LesLor',1)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(1,'Paz')
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name('LesLor', None)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name('LesLor', float('nan'))
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(None, 'LesLor')
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name('11',['LesLor', 'Paz'])
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+::
+
+If two arguments are not a string
+
+        >>> say_my_name(1, 2)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::
+
+If there is not arguments.
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+::
+
+Special character
+	>>> say_my_name('Jim O'malley','Musk')
+	Traceback (most recent call last):
+	SyntaxError: invalid syntax
