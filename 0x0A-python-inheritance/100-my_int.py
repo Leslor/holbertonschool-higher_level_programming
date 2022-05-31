@@ -3,7 +3,7 @@
 
 
 class MyInt(int):
-
+    """Reverse"""
     def eq(self, other):
         """Method eq"""
         return super().ne(other)
