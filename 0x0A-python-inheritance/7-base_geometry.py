@@ -4,7 +4,9 @@
 
 class BaseGeometry():
     """A class Father of the geometrics figures"""
+
     def __init__(self):
+        """Methodo Constructor"""
         pass
 
     def area(self):
