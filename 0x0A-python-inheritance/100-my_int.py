@@ -4,10 +4,9 @@
 
 class MyInt(int):
     """Reverse"""
-    def eq(self, other):
-        """Method eq"""
-        return super().ne(other)
 
-    def ne(self, other):
-        """Method eq"""
-        return super().eq(other)
+    def __eq__(self, other):
+        return super().__ne__(other)
+
+    def __ne__(self, other):
+        return super().__eq__(other)
