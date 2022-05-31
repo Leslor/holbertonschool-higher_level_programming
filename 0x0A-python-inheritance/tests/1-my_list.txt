@@ -40,6 +40,11 @@ Numbers
 	>>> print(my_list[10])
 	Traceback (most recent call last):
 	IndexError: list index out of range
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> my_list.remove(5)
+	>>>	print(my_list)
+	[1, 4, 2, 3]
 
 Non-TypeList
 ===========
@@ -84,8 +89,7 @@ If an undefined variable is passed
 	Traceback (most recent call last):
 	NameError: name 'inf' is not defined
 
-If we pass an infinity or Nan number
-
+If we pass an infinity or Nan number or other DataTypes
 
 	>>> my_list = MyList((float('inf'), 4, 0, 100))
 	>>> my_list
@@ -97,3 +101,10 @@ If we pass an infinity or Nan number
 	[inf, 4, nan, 0, 100]
 	>>> my_list.print_sorted()
 	[0, 4, 100, inf, nan]
+	>>> my_list = MyList([1, "Betty", "Holberton", 5])
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'str' and 'int'
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
