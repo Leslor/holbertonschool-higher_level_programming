@@ -1,108 +1,78 @@
-==================================
-|  How to Use 7-base_geometry.py |
-==================================
-
-This module has one Class called ``BaseGeometry`` and this class have one method `` def area(self)`` that we will testing ``def integer_validator(self, name, value)``
-
-Import the Class
-
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-Numbers
-=======
-
-``print_sorted(self)`` prints the list, but sorted (ascending sort)
-::
-
-	>>> shape = BaseGeometry()
-	>>> type(shape)
-	<class '7-base_geometry.BaseGeometry'>
-	
-	>>> print(shape)
-	<7-base_geometry.BaseGeometry object at ...>
-
-	>>> shape.area()
-	Traceback (most recent call last):
-	Exception: area() is not implemented
-
-	>>> print(shape.integer_validator)
-	<bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry object at...>>
-
-	>>> shape.integer_validator("valid number", 1)
+>>> bg.integer_validator("valid number", 1)
 
 
 ::
 
-	>>> shape.integer_validator("invalid number", "number")
-	Traceback (most recent call last):
-	TypeError: invalid number must be an integer
+>>> bg.integer_validator("invalid number", "number")
+Traceback (most recent call last):
+TypeError: invalid number must be an integer
 
 
 ::
 
-	>>> shape.integer_validator("another invalid", True)
-	Traceback (most recent call last):
-	TypeError: another invalid must be an integer
+>>> bg.integer_validator("another invalid", True)
+Traceback (most recent call last):
+TypeError: another invalid must be an integer
 
 
 ::
 
-	>>> shape.integer_validator("invalid tuple", (1,))
-	Traceback (most recent call last):
-	TypeError: invalid tuple must be an integer
+>>> bg.integer_validator("invalid tuple", (1,))
+Traceback (most recent call last):
+TypeError: invalid tuple must be an integer
 
 
 ::
 
-	>>> shape.integer_validator("and another", [3])
-	Traceback (most recent call last):
-	TypeError: and another must be an integer
+>>> bg.integer_validator("and another", [3])
+Traceback (most recent call last):
+TypeError: and another must be an integer
 
 
 ::
 
-	>>> shape.integer_validator("more invalid testing", {3, 4})
-	Traceback (most recent call last):
-	TypeError: more invalid testing must be an integer
+>>> bg.integer_validator("more invalid testing", {3, 4})
+Traceback (most recent call last):
+TypeError: more invalid testing must be an integer
 
 
 ::
 
-	>>> shape.integer_validator("absolutely every possible invalid", None)
-	Traceback (most recent call last):
-	TypeError: absolutely every possible invalid must be an integer
+>>> bg.integer_validator("absolutely every possible invalid", None)
+Traceback (most recent call last):
+TypeError: absolutely every possible invalid must be an integer
 
 
 ::
 
-	>>> shape.integer_validator("invalid int", -1)
-	Traceback (most recent call last):
-	ValueError: invalid int must be greater than 0
+>>> bg.integer_validator("invalid int", -1)
+Traceback (most recent call last):
+ValueError: invalid int must be greater than 0
 
 
 ::
 
-	>>> shape.integer_validator("invalid int", 0)
-	Traceback (most recent call last):
-	ValueError: invalid int must be greater than 0
+>>> bg.integer_validator("invalid int", 0)
+Traceback (most recent call last):
+ValueError: invalid int must be greater than 0
 
 
 ::
 
-	>>> shape.integer_validator() 
-	Traceback (most recent call last):
-	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator() # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 
 ::
 
-	>>> shape.integer_validator(None) # doctest: +NORMALIZE_WHITESPACE
-	Traceback (most recent call last):
-	TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> bg.integer_validator(None) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 
 ::
 
-	>>> shape.integer_validator({"a": 1}, (1, 2))
-	Traceback (most recent call last):
-	TypeError: {'a': 1} must be an integer
+>>> bg.integer_validator({"a": 1}, (1, 2))
+Traceback (most recent call last):
+TypeError: {'a': 1} must be an integer
