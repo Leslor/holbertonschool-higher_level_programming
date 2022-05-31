@@ -3,6 +3,9 @@
 import json
 
 
-def class_to_json(obj):
+def load_from_json_file(filename):
     """Returns the number of characters added """
-    return obj.__dict__
+
+    with open(filename) as f:
+        content = json.load(f)
+        return content
