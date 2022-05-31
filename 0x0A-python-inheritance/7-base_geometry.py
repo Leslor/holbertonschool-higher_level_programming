@@ -4,11 +4,6 @@
 
 class BaseGeometry():
     """A class Father of the geometrics figures"""
-
-    def __init__(self):
-        """Methodo Constructor"""
-        pass
-
     def area(self):
         """Public instance method that raises an Exception
         the message area() is not implemented"""
