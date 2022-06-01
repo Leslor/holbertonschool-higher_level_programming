@@ -4,7 +4,7 @@
 
 def read_file(filename=""):
     """Returns an integer: the addition of a and b"""
-    with open(filename,'r', encoding="utf-8") as f:
+    with open(filename, 'r', encoding="utf-8") as f:
         content = f.read()
 
     print(content)
