@@ -1,18 +1,21 @@
-# Higher Level Programming
+#0x0C. Python - Almost a circle
 > High-level languages allow programmers to write instructions in a language that is easier to understand than low-level languages. Translators are needed to translate programs written in high-level languages into the machine code that a computer understands.
 
-## Description
+## Resources
 
-This is a project for Holberton School Peru. The objective is to lear about the how higher language programming works, and continue with the Holberton School curriculum.
-
+- args/kwargs
+- JSON encoder and decoder
+- unittest module
+- Python test cheatsheet
 ## Technologies & Tools
 + Allowed editors: **vi**, **vim**, **emacs**
-+ Programming language: Python, JavaScript
++ Programming language: Python
 + Git platform: **Github**
 ---
 
 ## Requirements
 * Installed python3
+* Python Unit Test Modul
 
 ---
 
@@ -22,10 +25,6 @@ You can run Python files using this command:
 ```
 $ python3 name_file.py
 ```
-## List of Project:
-* [0x00-python-hello_world](https://github.com/Leslor/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world)
-* [0x01-python-if_else_loops_functions](https://github.com/Leslor/holbertonschool-higher_level_programming/tree/master/0x01-python-if_else_loops_functions)
----
 
 ## Author
 * **Leslie Paz** - [Leslor](https://github.com/Leslor)
