@@ -105,7 +105,7 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print()
         else:
-            rectangle = ' ' * self.__x + str(self.symbol) * (self.__width)
+            rectangle = ' ' * self.__x + str(symbol) * (self.__width)
             if self.__y > 0:
                 print('\n' * (self.__y - 1))
             rectg_format = [rectangle for i in range(self.__height)]
