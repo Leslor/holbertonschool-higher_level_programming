@@ -9,6 +9,7 @@ class Rectangle(Base):
     symbol = "#"
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Constructor of the Rectangle Class"""
         self.width = width 
         self.height = height
         self.x = x
