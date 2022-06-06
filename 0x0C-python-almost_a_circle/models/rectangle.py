@@ -6,11 +6,10 @@ from models.base import Base
 class Rectangle(Base):
     """class Rectangle that inherits from Base
     """
-    symbol = "#"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor of the Rectangle Class"""
-        self.width = width 
+        self.width = width
         self.height = height
         self.x = x
         self.y = y
@@ -94,6 +93,7 @@ class Rectangle(Base):
         return area_r
 
     def display(self):
+        symbol = "#"
         """Private Method that  prints the Rectangle with the character # """
         if self.__width == 0 or self.__height == 0:
             print()
