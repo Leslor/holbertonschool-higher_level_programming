@@ -119,17 +119,26 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Private Method that  prints the Rectangle with the character # """
-        if len(kwargs) == 0:
+        if len(args) > 0:
+            atr_va = [self.id, self.width, self.height, self.x, self.y]
+            i = 0
+            while i < len(atr_va) and i < len(args):
+                atr_va[i] = args[i]
+                i += 1
+            self.__init__(atr_va[1], atr_va[2], atr_va[3], atr_va[4],
+                          atr_va[0])
+        elif len(kwargs) > 0:
+            atr_value = {'id': self.id, 'width': self.width,
+                         'height': self.height, 'x': self.x, 'y': self.y}
+            for key_atr in atr_value.keys():
+                for key, value in kwargs.items():
+                    if key_atr == key:
+                        atr_value[key_atr] = value
+            self.__init__(atr_value.get('width'), atr_value.get('height'),
+                          atr_value.get('x'), atr_value.get('y'),
+                          atr_value.get('id'))
+        else:
             return
-        atr_value = {'id': self.id, 'width': self.width,
-                     'height': self.height, 'x': self.x, 'y': self.y}
-        for key_atr in atr_value.keys():
-            for key, value in kwargs.items():
-                if key_atr == key:
-                    atr_value[key_atr] = value
-        self.__init__(atr_value.get('width'), atr_value.get('height'),
-                      atr_value.get('x'), atr_value.get('y'),
-                      atr_value.get('id'))
 
     def to_dictionary(self):
         """Private Method that  prints the Rectangle with the character # """
