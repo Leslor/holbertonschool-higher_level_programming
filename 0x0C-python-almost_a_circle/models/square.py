@@ -51,8 +51,8 @@ class Square(Rectangle):
                         atr_value[key_atr] = value
             self.__init__(atr_value.get('size'), atr_value.get('x'),
                           atr_value.get('y'), atr_value.get('id'))
-    else:
-        return
+        else:
+            return
 
     def to_dictionary(self):
         """to_dictionary method"""
