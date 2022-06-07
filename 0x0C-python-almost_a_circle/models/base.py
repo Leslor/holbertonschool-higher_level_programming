@@ -44,4 +44,5 @@ class Base():
         """Class method that returns an instance with
         all attributes already set"""
         dummy = cls(**dictionary)
-        return dummy.update(**dictionary)
+        dummy.update(**dictionary)
+        return dummy
