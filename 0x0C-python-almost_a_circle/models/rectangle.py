@@ -100,8 +100,9 @@ class Rectangle(Base):
         return area_r
 
     def display(self):
-        symbol = "#"
         """Private Method that  prints the Rectangle with the character # """
+
+        symbol = "#"
         if self.__width == 0 or self.__height == 0:
             print()
         else:
@@ -112,10 +113,12 @@ class Rectangle(Base):
             print('\n'.join(rectg_format))
 
     def __str__(self):
+        """Private Method that  prints the Rectangle with the character # """
         return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} -' \
-                f' {self.__width}/{self.__height}'
+               f' {self.__width}/{self.__height}'
 
     def update(self, *args, **kwargs):
+        """Private Method that  prints the Rectangle with the character # """
         if len(kwargs) == 0:
             return
         atr_value = {'id': self.id, 'width': self.width,
@@ -129,6 +132,7 @@ class Rectangle(Base):
                       atr_value.get('id'))
 
     def to_dictionary(self):
+        """Private Method that  prints the Rectangle with the character # """
         key_order = ('y', 'x', 'id', 'width', 'height')
         return {key_order[i]: getattr(self, key_order[i])
                 for i in range(len(key_order))}
