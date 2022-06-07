@@ -56,6 +56,5 @@ class Base():
             return []
         with open(filename, 'r') as f:
             new_dict = cls.from_json_string(f.read())
-            print(new_dict)
             new_inst = [cls.create(**inst) for inst in new_dict]
             return new_inst
