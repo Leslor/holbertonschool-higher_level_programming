@@ -2,7 +2,7 @@
 """Class Base"""
 import json
 from os.path import exists
-
+import turtle
 
 class Base():
     """class Base
@@ -58,3 +58,36 @@ class Base():
             new_dict = cls.from_json_string(f.read())
             new_inst = [cls.create(**inst) for inst in new_dict]
             return new_inst
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Drawing Board and turtle"""
+        wn = turtle.Screen()
+        wn.bgcolor("#343434")
+        wn.title("Shapes")
+        fig = turtle.Turtle()
+        fig.shape('turtle')
+        fig.pensize(4)
+
+        """Moving the Turtle"""
+        for rectangle in list_rectangles:
+            fig.hideturtle()
+            fig.color('#1BDED9')
+            fig.up()
+            fig.goto(rectangle.x, rectangle.y)
+            fig.down()
+            for r in range(2):
+                fig.forward(rectangle.width)
+                fig.left(90)
+                fig.forward(rectangle.height)
+                fig.left(90)
+
+        for square in list_squares:
+            fig.hideturtle()
+            fig.color('#2D70FF')
+            fig.up()
+            fig.goto(square.x, square.y)
+            fig.down()
+            for s in range(4):
+                fig.forward(square.size)
+                fig.left(90)
