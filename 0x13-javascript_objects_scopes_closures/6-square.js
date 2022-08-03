@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const Rectangle = require('./5-rectangle');
+const SquareBase = require('./5-rectangle');
 
-module.exports = class Square extends Rectangle {
+module.exports = class Square extends SquareBase {
   constructor (size) {
     super(size, size);
   }
