@@ -2,11 +2,12 @@
 '''This Script lists all states from the database
 hbtn_0e_0_usa'''
 
+import MySQLdb
+from sys import argv
+
 
 if __name__ == "__main__":
-   """ Connect to the DB and execute a query"""
-    import MySQLdb
-    from sys import argv
+    """ Connect to the DB and execute a query"""
 
     def mysqlrun():
         """Function for connecting to MySQL database"""
