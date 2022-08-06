@@ -21,9 +21,8 @@ if __name__ == "__main__":
 
         cur = db_connection.cursor()
         cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
-        query = cur.fetchall()
+        query = list(cur.fetchall())
         for row in query:
             print(row)
         cur.close()
-        db_connection.close()
     mysqlrun()
