@@ -4,7 +4,7 @@ hbtn_0e_0_usa'''
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
+from model_state import Base, State
 Base = declarative_base()
 
 
@@ -15,4 +15,3 @@ class City(Base):
                 nullable=False, unique=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
-    relationship('State')
