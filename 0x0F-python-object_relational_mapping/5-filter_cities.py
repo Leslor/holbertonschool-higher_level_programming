@@ -20,7 +20,6 @@ def mysqlrun():
                             )
     except Exception:
         return (0)
-    state = argv[4]
     cur = db_connection.cursor()
     cur.execute("SELECT cities.name FROM cities "
                 "LEFT JOIN states ON cities.state_id = states.id "
