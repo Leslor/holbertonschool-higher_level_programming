@@ -21,7 +21,7 @@ if __name__ == "__main__":
                             )
         state = argv[4]
         cur = db_connection.cursor()
-        cur.execute("SELECT * FROM states WHERE name LIKE %s", [state])
+        cur.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY state.id", [state])
         query = cur.fetchall()
         for row in query:
             print(row)
