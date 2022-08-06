@@ -11,16 +11,13 @@ if __name__ == "__main__":
     def mysqlrun():
         """Function for connecting to MySQL database"""
         username, passwd, db_name = argv[1], argv[2], argv[3]
-        try:
-            db_connection = MySQLdb.connect(
-                                host="localhost",
-                                port=3306,
-                                user=username,
-                                passwd=passwd,
-                                db=db_name
-                                )
-        except Exception:
-            return (0)
+        db_connection = MySQLdb.connect(
+                            host="localhost",
+                            port=3306,
+                            user=username,
+                            passwd=passwd,
+                            db=db_name
+                             )
 
         cur = db_connection.cursor()
         cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
