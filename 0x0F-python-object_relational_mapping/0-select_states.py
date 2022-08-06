@@ -26,3 +26,4 @@ if __name__ == "__main__":
             print(row)
         cur.close()
         db_connection.close()
+mysqlrun()
