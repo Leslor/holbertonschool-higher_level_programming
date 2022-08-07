@@ -22,10 +22,11 @@ def mysqlrun():
         return (0)
     state = argv[4]
     cur = db_connection.cursor()
-    cur.execute("SELECT cities.name FROM cities"
-                "LEFT JOIN states ON cities.state_id = states.id"
-                f"WHERE states.name = {state}"
-                "ORDER BY cities.id")
+    query_1 = """SELECT cities.name FROM cities
+                LEFT JOIN states ON cities.state_id = states.id
+                WHERE states.name=%s
+                ORDER BY cities.id"""
+    cur.execute(query_1, (state,))
     query = cur.fetchall()
     cities = ["".join(re.findall("[a-zA-Z]", str(row))) for row in query]
     print(", ".join(cities))
