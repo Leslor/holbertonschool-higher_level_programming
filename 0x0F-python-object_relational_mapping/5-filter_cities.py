@@ -23,12 +23,12 @@ def mysqlrun():
     state = argv[4]
     cur = db_connection.cursor()
     query_1 = """SELECT cities.name FROM cities
-                LEFT JOIN states ON cities.state_id = states.id
+                INNER JOIN states ON cities.state_id = states.id
                 WHERE states.name=%s
                 ORDER BY cities.id"""
     cur.execute(query_1, (state,))
     query = cur.fetchall()
-    cities = ["".join(re.findall("[a-zA-Z]", str(row))) for row in query]
+    cities = ["".join(re.findall("[a-zA-Z0-9]", str(row))) for row in query]
     print(", ".join(cities))
     cur.close()
     db_connection.close()
