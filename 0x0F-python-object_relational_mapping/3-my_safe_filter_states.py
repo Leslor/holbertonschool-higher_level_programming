@@ -18,9 +18,10 @@ def mysqlrun():
                         )
     state = argv[4]
     cur = db_connection.cursor()
-    cur.execute(f"SELECT * FROM states "
-                "WHERE name LIKE {state} "
-                "ORDER BY id")
+    query_1 = """SELECT * FROM states
+                WHERE name=%s
+                ORDER BY id"""
+    cur.execute(query_1, (state,))
     query = cur.fetchall()
     for row in query:
         print(row)
