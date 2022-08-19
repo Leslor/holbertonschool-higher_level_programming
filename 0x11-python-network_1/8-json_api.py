@@ -7,17 +7,17 @@ if __name__ == "__main__":
     import requests
     from sys import argv
     url = "http://0.0.0.0:5000/search_user"
-    json = {}
-    if (len(argv) == 2 and isinstance(argv[1], str)):
-        json = {'q': argv[1]}
+    jsond = {}
+    if (len(argv) == 2):
+        jsond = {'q': argv[1]}
     else:
-        json = {'q': ''}
-    content = requests.post(url, data=json)
+        jsond = {'q': ''}
+    content = requests.post(url, data=jsond)
     try:
-        response = conten.json()
+        response = content.json()
         if (response == {}):
             print("No result")
         else:
             print("[{}] {}".format(response.get("id"), response.get("name")))
-    except ValueError:
+    except:
         print("Not a valid JSON")
