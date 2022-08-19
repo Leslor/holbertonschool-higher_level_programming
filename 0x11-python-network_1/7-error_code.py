@@ -9,7 +9,6 @@ if __name__ == "__main__":
     url = requests.get(argv[1])
     status = url.status_code
     if (status >= 400):
-        print('Error code:'.format(status))
+        print('Error code: {}'.format(status))
     else:
         print(url.text)
-    url.close()
