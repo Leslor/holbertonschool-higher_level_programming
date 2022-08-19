@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """Script the fetches: https://intranet.hbtn.io/status"""
-import urllib.request
 
 if __name__ == "__main__":
-    url = urllib.request.Request('https://intranet.hbtn.io/status')
+    import urllib.request
+
+
+    url = 'https://intranet.hbtn.io/status'
     with urllib.request.urlopen(url) as response:
         content = response.read()
         utf8_content = content.decode('utf-8')
