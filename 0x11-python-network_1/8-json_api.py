@@ -14,7 +14,8 @@ if __name__ == "__main__":
         json = {'q': ''}
     try:
         content = requests.post(url, data=json)
-        if (content.json() == {}):
+        response = conten.json()
+        if (response == {}):
             print("No result")
         else:
             print("[{}] {}".format(response.get("id"), response.get("name")))
