@@ -6,7 +6,8 @@ the value of the variable X-Request-Id in the response headers"""
 if __name__ == "__main__":
     import requests
     from sys import argv
+
     url = argv[1]
     content = requests.get(url)
-    print("{}".format(content.headers['X-Request-Id']))
+    print(content.headers.['X-Request-Id'])
     content.close()
