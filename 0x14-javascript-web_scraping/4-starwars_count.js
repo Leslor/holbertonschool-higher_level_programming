@@ -1,23 +1,21 @@
 #!/usr/bin/node
-const axios = require('axios');
+/**
+* Request status code
+*/
 
-axios
-  .get(process.argv[2])
-  .then(res => {
-    let counter = 0;
-    for (let i = 0; i < res.data.count; ++i) {
-      const listas = res.data.results[i].characters;
-      // console.log(listas)
-      for (let j = 0; j < listas.length; ++j) {
-        const id = listas[j].split('/')[5];
-        // console.log(id);
-        if (id === '18') {
-          counter += 1;
-        }
-      }
-    }
-    console.log(counter);
+const axios = require('axios').default;
+const url = process.argv[2];
+
+axios.get(url)
+  .then(({ data }) => {
+    // handle success
+    const films = data.results;
+    let count = 0;
+    films.forEach(res => {
+      res.characters.forEach(link => {
+        if (link.includes('18')) count++;
+      });
+    });
+    console.log(count);
   })
-  .catch(error => {
-    console.log(`code: ${error}`);
-  });
+  .catch((error) => console.log(error));
